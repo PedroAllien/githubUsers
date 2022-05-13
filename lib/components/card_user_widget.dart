@@ -23,35 +23,76 @@ class _UsuarioCardState extends State<UsuarioCard> {
             width: size.width * 1,
             padding: const EdgeInsets.all(10),
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Image.network(
-                  widget.usuario.image,
-                  height: 70,
-                  width: 70,
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 30),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(top: 15),
-                        child: Text(
-                          widget.usuario.nome,
-                          style: TextStyle(fontSize: 20),
-                        ),
+                Row(
+                  children: [
+                    Image.network(
+                      widget.usuario.image,
+                      height: 70,
+                      width: 70,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Padding(
+                            padding: EdgeInsets.only(top: 15),
+                            child: Text(
+                              widget.usuario.nome,
+                              style: TextStyle(fontSize: 20),
+                            ),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.only(top: 5),
+                            child: Text(
+                              "Github",
+                              style: TextStyle(
+                                  fontSize: 12, color: Colors.grey[400]),
+                            ),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: EdgeInsets.only(top: 5),
-                        child: Text(
-                          "Github",
-                          style:
-                              TextStyle(fontSize: 12, color: Colors.grey[400]),
-                        ),
-                      )
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: const [
+                          Icon(
+                            Icons.star,
+                            size: 16,
+                            color: Colors.yellow,
+                          ),
+                          Text(
+                            "4.9",
+                            style: TextStyle(
+                              fontSize: 10,
+                            ),
+                          ),
+                          Icon(
+                            Icons.location_pin,
+                            size: 16,
+                            color: Colors.yellow,
+                          ),
+                          Text(
+                            "4.5 km",
+                            style: TextStyle(
+                              fontSize: 10,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
           ),

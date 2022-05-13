@@ -37,7 +37,7 @@ class SearchInput extends StatelessWidget {
                       color: Colors.grey.withOpacity(0.3),
                       spreadRadius: 1,
                       blurRadius: 1,
-                      offset: Offset(1, 1),
+                      offset: Offset(2, 4),
                     ),
                   ],
                   color: Color(0xff146E64),

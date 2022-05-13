@@ -55,12 +55,11 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(Icons.notifications),
           ),
           Container(
-            padding: const EdgeInsets.all(4),
+            padding: const EdgeInsets.all(6),
             margin: const EdgeInsets.only(right: 10),
             child: ClipRRect(
               borderRadius: BorderRadius.circular(6),
               child: SizedBox.fromSize(
-                size: Size(40, 40),
                 child: Image.network(
                     'https://media-exp1.licdn.com/dms/image/C4D03AQEdIGuNf3WLjA/profile-displayphoto-shrink_800_800/0/1646329899648?e=1657756800&v=beta&t=MFPPl7pPTCe5S96qeL55XYrTmSXo2qx7SEcMl09pOaI',
                     fit: BoxFit.cover),
